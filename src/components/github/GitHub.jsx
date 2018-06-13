@@ -39,10 +39,6 @@ export class GitHub extends Component {
       axios({
         method: "get",
         url: `https://api.github.com/users/${this.state.gitHubData.login}/repos`,
-        auth: {
-          username: "DouglasGo8",
-          password: "Wynardtag3"
-        }
       }).then(res => {
         //console.log(res.data);
         this.setState({
