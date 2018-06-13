@@ -4,7 +4,7 @@ import {render, findDOMNode} from 'react-dom';
 import {Header} from './components/Header';
 import {Button} from './components/form/Button';
 import {Form} from './components/form/Form';
-import {GitHub} from './components/github/GitHub';
+import {Github} from './components/github/Github';
 
 export default class App extends Component {
 
@@ -44,7 +44,7 @@ export default class App extends Component {
         <hr />
         <Form />
         <hr />
-        <GitHub />
+        <Github />
       </div>
     );
   }

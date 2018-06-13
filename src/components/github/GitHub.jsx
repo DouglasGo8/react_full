@@ -13,7 +13,7 @@ import axios from "axios";
  *
  * @author Douglas D.b
  */
-export class GitHub extends Component {
+export class Github extends Component {
 
   state = {
     gitHubData: {},
@@ -51,7 +51,7 @@ export class GitHub extends Component {
   }
 
   handleShowFav = () => {
-    console.log(`https://api.github.com/users/foouser/starred`);
+    // console.log(`https://api.github.com/users/foouser/starred`);
     this.setState({
       isShowRepo: false,
       isShowFav: true
@@ -116,6 +116,6 @@ export class GitHub extends Component {
   }
 }
 
-GitHub.defaultProps = {
+Github.defaultProps = {
   gitHubLink: "https://api.github.com/users/"
 };
