@@ -63,10 +63,6 @@ export class GitHub extends Component {
       axios({
         method: "get",
         url: this.props.gitHubLink.concat(e.target.value),
-        auth: {
-          username: "DouglasGo8",
-          password: "Wynardtag3"
-        }
       }).then(res => {
         this.setState({gitHubData: res.data});
       }).catch(err => {
