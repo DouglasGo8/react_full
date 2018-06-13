@@ -33,10 +33,9 @@ export class GitHub extends Component {
 
   handleShowRepo = () => {
 
-    //console.log(this.state.gitHubData.login);
-
-    if (this.state.gitHubData.login !== 'undefined') {
+    if (this.state.gitHubData.login) {
       // console.log(`https://api.github.com/users/${this.state.gitHubData.login}/repos`);
+      console.log(this.state.gitHubData.login);
       axios({
         method: "get",
         url: `https://api.github.com/users/${this.state.gitHubData.login}/repos`,
@@ -56,7 +55,11 @@ export class GitHub extends Component {
   }
 
   handleShowFav = () => {
-    this.setState({isShowRepo: false, isShowFav: true});
+    console.log(`https://api.github.com/users/foouser/starred`);
+    this.setState({
+      isShowRepo: false,
+      isShowFav: true
+    })
   }
 
   searchGitHubRepo = (e) => {
@@ -90,7 +93,7 @@ export class GitHub extends Component {
           <tr>
             <th className="center aligned">Photo</th>
             <th className="center aligned">User Info</th>
-            <th className="right aligned">Repo Info</th>
+            <th className="right aligned">Further Info</th>
           </tr>
         </thead>
         <tbody>
@@ -101,9 +104,13 @@ export class GitHub extends Component {
             <td className="left aligned">{tagUserInfo}</td>
             <td rowSpan="2" className="left aligned">
               <div className="ui form">
-                <RepoFavButton handleShowRepo={this.handleShowRepo} handleShowFav={this.handleShowFav}/>
+                <RepoFavButton
+                  handleShowRepo={this.handleShowRepo}
+                  handleShowFav={this.handleShowFav}/>
                 <div className="ui right aligned">
-                  {this.state.isShowRepo && <Repository gitHubDataRepo={this.state.gitHubDataRepo}/>}
+                  {this.state.isShowRepo &&
+                    <Repository
+                      gitHubDataRepo={this.state.gitHubDataRepo}/>}
                   {this.state.isShowFav && <Favorite/>}
                 </div>
               </div>
