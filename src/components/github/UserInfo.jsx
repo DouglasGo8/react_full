@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
  */
 export const UserInfo = ({user}) => (
   <div className='ui form'>
-
     <div className='ui center aligned'>
       <h3 className='ui right header'>
         <a href={user.html_url} className='ui medium'>
@@ -15,7 +14,6 @@ export const UserInfo = ({user}) => (
         </a>
       </h3>
     </div>
-
     <div className='ui bulleted list'>
       <div className='item'>Repositories: {user.public_repos}</div>
       <div className='item'>Followers: {user.followers}</div>

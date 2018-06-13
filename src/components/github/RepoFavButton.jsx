@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 export const RepoFavButton = ({handleShowRepo, handleShowFav}) => (
   <div className="ui buttons">
@@ -10,3 +10,8 @@ export const RepoFavButton = ({handleShowRepo, handleShowFav}) => (
       className="ui button">Fav</button>
   </div>
 );
+
+RepoFavButton.propTypes = {
+  handleShowRepo: PropTypes.func.isRequired,
+  handleShowFav: PropTypes.func.isRequired,
+}

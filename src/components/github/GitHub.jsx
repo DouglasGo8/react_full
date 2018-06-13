@@ -76,9 +76,9 @@ export class GitHub extends Component {
   render() {
     const tagUserInfo = JSON.stringify(this.state.gitHubData) !== "{}"
       ? (<UserInfo user={this.state.gitHubData}/>)
-      : (<UserInfo/>);
+      : (<UserInfo />);
     return (<div className="ui container">
-      <h3 className="ui header middle">GitHub</h3>
+      <h3 className="ui header middle">Github Suggest</h3>
       <Search searchGitHubRepoHandle={this.searchGitHubRepo}/>
       <table className="ui celled striped table">
         <thead>
@@ -91,7 +91,9 @@ export class GitHub extends Component {
         <tbody>
           <tr>
             <td className="center aligned">
-              <Photo url={this.state.gitHubData.html_url} image={this.state.gitHubData.avatar_url}/>
+              <Photo
+                url={this.state.gitHubData.html_url}
+                image={this.state.gitHubData.avatar_url}/>
             </td>
             <td className="left aligned">{tagUserInfo}</td>
             <td rowSpan="2" className="left aligned">

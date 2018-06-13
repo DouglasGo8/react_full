@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import PropTypes from 'prop-types';
 
 const showList = (repo) => (
   <div className="ui bulleted list" key={repo.id}>
@@ -7,8 +7,7 @@ const showList = (repo) => (
       <a target='_blank' href={repo.html_url}>{repo.name}</a>
     </div>
   </div>
-)
-
+);
 
 export const Repository = ({gitHubDataRepo}) => (
   <div className="ui sizer vertical segment">
@@ -19,11 +18,18 @@ export const Repository = ({gitHubDataRepo}) => (
   </div>
 );
 
-
 Repository.defaultProps = {
   gitHubDataRepo : {
     html_url: '',
     name: '',
     id: ''
   }
+}
+
+Repository.propTypes = {
+  repo: PropTypes.shape({
+    id: PropTypes.number,
+    html_url: PropTypes.string,
+    name: PropTypes.string,
+  })
 }
