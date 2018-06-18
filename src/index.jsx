@@ -40,7 +40,7 @@ export default class App extends Component {
     //console.log('render()');
 
     return (
-      <div className='ui basic segment'>
+      <div className='ui divider'>
         <Header
           title='Stateless Component'
           color={this.state.color} />

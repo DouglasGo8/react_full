@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Header = ({title, color}) => (
   <div className='ui container'>
-    <h2 className='ui small header' style={{
+    <h2 className='ui small horizontal divider header' style={{
       backgroundColor: color
     }}>
       Title is <i>{title}</i>
