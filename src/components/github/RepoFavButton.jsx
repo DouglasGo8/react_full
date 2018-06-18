@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * [RepoFavButton description]
+ * @author Douglas D.b
+ * @param {[type]} handleShowRepo [description]
+ * @param {[type]} handleShowFav  [description]
+ */
 export const RepoFavButton = ({handleShowRepo, handleShowFav}) => (
   <div className="ui buttons">
     <button onClick={handleShowRepo}

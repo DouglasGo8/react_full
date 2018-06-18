@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import {render, findDOMNode} from 'react-dom';
 // Components
-import {Header} from './components/Header';
+import {Header} from './components/common/Header';
 import {Button} from './components/form/Button';
 import {Form} from './components/form/Form';
 import {Github} from './components/github/Github';
-
+import {ThirdParty} from './components/thirdparty/ThirdParty';
+/**
+ * [state description]
+ * @type {Object}
+ */
 export default class App extends Component {
 
   state = {
@@ -45,6 +49,8 @@ export default class App extends Component {
         <Form />
         <hr />
         <Github />
+        <hr />
+        <ThirdParty />
       </div>
     );
   }

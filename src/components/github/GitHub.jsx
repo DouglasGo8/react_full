@@ -105,7 +105,9 @@ export class Github extends Component {
                   {this.state.isShowRepo &&
                     <Repository
                       gitHubDataRepo={this.state.gitHubDataRepo}/>}
-                  {this.state.isShowFav && <Favorite/>}
+                  {this.state.isShowFav &&
+                    <Favorite
+                      gitHubDataFav={this.state.gitHubDataFav}/>}
                 </div>
               </div>
             </td>
